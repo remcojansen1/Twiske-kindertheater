@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.line-zakelijk{
+    border-top: 2px solid #CBBBA0;
+    margin: 35px 0;	
+}
+.bg-zakelijk{
+	background-color: #9BB5C2
+}
+.info-voorstelling-1 {grid-area: info-voorstelling-1;}
+.afspraak-zakelijk-1 {grid-area: afspraak-zakelijk-1;}
+.info-voorstelling-2 {grid-area: info-voorstelling-2;}
+.afspraak-zakelijk-2 {grid-area: afspraak-zakelijk-2;}
+
+.voorstelling-kop{
+	color: hsla(216,36%,36%,1.00);
+	font-size: 2.3rem;
+
+}
+#zaalverhuur{
+    grid-template-areas:'info-voorstelling-1' 'afspraak-zakelijk-1''info-voorstelling-2' 'afspraak-zakelijk-2' ;
+    grid-template-columns:100%;
+    display: grid;
+    justify-content: center;
+}
+#zaalverhuur>div{
+    padding: 25px;
+    margin: 15PX 15px
+}
+#zaalverhuur>div>p{
+    margin: 15px 0;
+}
+#zaalverhuur>div>ul>li{
+    margin-bottom: 15px;
+	font-size:100%;
+	font-weight: 600;
+}
+.afspraak-zakelijk-1, .afspraak-zakelijk-2, .afspraak-zakelijk-3, .afspraak-zakelijk-4{
+	height: 300px;
+}
+.info-zakelijk{
+	/*background-image: url("../img/BG-zakelijk-1920x600-20procent.jpg");*/
+	background-size:cover;
+	padding: 25px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.info-zakelijk h1{
+	text-align: center;
+	background-color: #CBBBA0;
+	padding: 20px;
+}
+.info-zakelijk h3{
+	max-width: 900px;
+	margin:25px auto;
+	font-size: 1.4rem;
+	color: hsla(216,36%,36%,1.00);
+}
+.info-zakelijk p{
+	margin: 10px auto;
+	max-width: 900px;
+}
+ .voorstelling-bestel-button{
+    background-color: #CBBBA0;
+    width: 85%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: "le-havre";
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 3rem;
+    padding: 5px;
+    margin: 15px auto 25px;
+    transition: all 700ms;
+}
+ .voorstelling-bestel-button:hover{
+    background-color: #000;
+	color: #fff;
+}
+/*///////////////////////////
+//////////  TABLET /////////
+/////////////////////////*/
+@media screen and (min-width:1200px){
+
+/*/*VOORSTELLINGEN - GRID LAYOUT*/
+ 
+     #zaalverhuur{
+        grid-template-areas:'info-voorstelling-1 afspraak-zakelijk-1 info-voorstelling-2 afspraak-zakelijk-2' 'info-voorstelling-3 afspraak-zakelijk-3 info-voorstelling-4 afspraak-zakelijk-4';
+        grid-template-columns: 30% 20% 30% 20%;
+        display: grid;
+        justify-content: center;
+		justify-content: space-evenly;
+    	padding: 20px 40px;
+    }
+      .voorstelling-kop{
+        font-size:3vw;
+  	}
+      #zaalverhuur>div>ul>li{
+        font-size:1.1vw;
+}
+	.zaal-impressie{
+    width: 80%;
+    height: auto;
+    padding: 0px;
+}
+
+}

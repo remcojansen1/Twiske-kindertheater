@@ -1,0 +1,162 @@
+@charset "utf-8";
+*{
+	font-family: "le-havre";
+    font-weight: 900;
+	font-size: 1.1rem;
+	text-align: center;
+	text-transform: uppercase;
+	
+}
+body{
+    margin: 0px;
+    padding: 0px;
+        
+}
+
+nav, header, main, article, aside, footer, section{
+	display: block;
+	box-sizing: border-box;
+}
+/*clearfix*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*clearfix*/
+
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+
+.driehoek {
+    width:0px;
+    height:0px;
+	border-top:solid 35px hsla(191,100%,40%,0.50);
+    border-right:solid 30px transparent;
+    border-bottom:solid 30px transparent;
+    border-left:solid 30px transparent;
+    display: block;
+    margin: auto;
+}
+
+#container{
+	background-color: hsla(46,100%,50%,0.20);
+}
+
+/*navigation met header*/
+nav{
+	min-height: 50px;
+	background-color: #00A9CD;
+	margin-bottom: 20px;
+}
+
+#slide-show{
+	background-color: #F39325;
+	height: 470px;
+	margin-bottom: 20px;
+	display: none;
+}
+#search-field{
+	background-color: hsla(191,100%,40%,0.50);
+	min-height: 200px;
+	width: 80%;
+	margin: 0 auto;
+	}
+
+/*Main*/
+main{
+	text-align: center;
+    font-size: 15px;
+}
+#slide-show-comments{
+	background-color: #F39325;
+	min-height: 100px;
+}
+#news-adv{
+    height: 235px;
+    margin: 20px;
+	background-color: #8a63b6;
+}
+
+section{
+    height: 470px;
+	background-color: #fff;;
+    margin: 20px;
+}
+
+#agenda{
+	display: none;
+	background-color: #8a63b6;
+}
+/*footer*/
+footer{
+	min-height: 150px;
+	background-color: #00A9CD;
+}
+
+
+@media screen and (min-width:768px){
+	nav{
+		margin-bottom: 0px;
+	}
+	
+	#slide-show{
+		display: block;
+	}
+	#search-field{
+		
+	}
+	#card1, #card3,#card5{
+		float: left;
+		width: 44%;
+		min-width: 320px;
+		margin: 20px;
+	}
+	#card2, #card4,#card6{
+		float: right;
+		width: 44%;
+		min-width: 320px;
+		margin: 20px;
+	}
+	#news-adv{
+		height: 235px;
+		margin: 20px;
+	}
+	
+}
+
+
+@media screen and (min-width: 1200px){
+	nav{
+		height: 100px;
+	}
+	
+	
+	#card1, #card2{
+		float: left;
+		width: 30%;
+		margin: 20px;
+	}
+	#card3, #card4,#card5,#card6{
+		float: left;
+		width: 30%;
+		margin: 20px;
+	}
+	#news-adv{
+		float: right;
+		width: 30%;
+		height: 470px;
+		margin: 20px;
+	}
+	#agenda{
+		display: block;
+		float: right;
+		width: 30%;
+		height: 980px;
+		margin: 20px;
+	}
+}

@@ -1,0 +1,541 @@
+@charset "utf-8";
+@import url("slideshow.css");
+/* /////////////////////////
+////////// ALGEMEEN ///////
+/////////////////////////*/
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Raleway", "Helvetica Neue", "sans-serif";
+    font-weight: normal;
+	background-color: #CAF5FF;
+}
+h1,h2,h3{
+    font-family: "le-havre", "Helvetica Neue", "sans-serif";
+    font-weight: 700;
+    text-transform: capitalize;
+}
+nav, header, main, article, aside, footer, section{
+	display: block;
+	box-sizing: border-box;
+}
+/*clearfix*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*#container{
+	background-color: hsla(46,100%,50%,0.10);
+}*/
+
+/* /////////////////////////
+//////////  HEADER + NAV ///
+/////////////////////////*/
+
+#menu{
+    width: 100%;
+    position: absolute;
+    top: 170px;
+    right: 0px;
+	z-index: 10;
+    display: none;
+    margin: 0px;
+	-webkit-box-shadow:  0px 8px 16px 0px hsla(0,0%,0%,0.20);
+	box-shadow: 0px 8px 16px 0px hsla(0,0%,0%,0.20);
+
+}
+#menu a{
+    text-decoration: none;
+    padding: 30px 100px;
+    color: #000;
+	background-color: #00A9CD;
+    display: block;
+    text-align: right;
+	
+}
+#menu a:hover{
+	background-color: #80E8FF;
+	color: #000;
+}
+
+nav{
+	width: 100%;
+	height: 120px;
+	background-color: #FFF;
+	margin-bottom: 0px;
+    -webkit-box-shadow: 0 3px 3px 0 hsla(0,0%,0%,0.50);
+    box-shadow: 0 3px 3px 0 hsla(0,0%,0%,0.50);
+
+}
+.navigation{
+	display: none;
+}
+nav img {
+	position: absolute;
+	left: 50px;
+	top: 45px;
+	width: 250px;
+	height: auto;
+}
+/*hero - slide show*/
+#slide-show{
+	display: none;
+}
+
+/*zoekveld met agenda*/
+#search-field{
+	background-color: #00A9CD;
+	height: 200px;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 60px 50px;
+	padding: 40px;
+	margin: 0 auto;
+}
+.grid-item {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+	font-family: "raleway";
+    font-size: 1.1rem;
+	color: hsla(0,0%,0%,0.30);
+}
+.zoek {
+    grid-column: 1 / span 2;
+}
+.zoek-term {
+  width: 55%;
+  height: 100%;
+  border: #fff;
+  border-right: none;
+  font-size: 1.1rem;
+}
+.zoek-term:focus{
+  color: #000;
+}
+.searchButton {
+  width: 60px;
+  height: 100%;
+  padding: 5px;
+  border: #fff;
+  background: #fff;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
+}
+.genre{
+    background-color: #000;
+    color: #fff;
+	line-height: 4rem;
+	padding: 0px;
+	font-weight: 700;
+    transition: all 700ms;
+}
+.genre:hover{
+	background-color: hsla(354,79%,42%,1.00);
+}
+.driehoek {
+    width:0px;
+    height:0px;
+	border-top:solid 30px #00A9CD;
+    border-right:solid 40px transparent;
+    border-bottom:solid 30px transparent;
+    border-left:solid 40px transparent;
+    display: block;
+    margin: auto;
+}
+
+/*///////////////////////////
+//////////  MAIN ///////////
+/////////////////////////*/
+
+/*VOORSTELLINGEN - GRID LAYOUT*/
+.card1 {
+    grid-area: card1;
+}
+.card2 {grid-area: card2;}
+.card3 {grid-area: advertentie;}
+.card3>iframe {
+	width: 100%;
+	height: 100%;
+}
+.card4 {grid-area: card4;}
+.card5 {grid-area: card5;}
+.card6 {grid-area: card6;}
+.card7 {grid-area: card7;}
+.agenda {grid-area: agenda;}
+
+#card-image1{
+	background-image: url("../img/dolfje_weerwolfje-370x200.jpg");
+    height: 220px;
+    transition: transform 300ms ease-in-out;
+    background-position: center;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}
+#card-image2{
+	background-image:  url("../img/Promo kinderboekenweek-theater 370x200.jpg") ;
+	background-size:cover;
+	background-position:top;
+	height: 220px;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}	
+/*#card-image3{
+	background-image:  url("../img/Promo kinderboekenweek-theater 370x200.jpg");
+	background-size:cover;
+	background-position:top;
+	height: 220px;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}*/
+#card-image4{
+	background-image:url("../img/Pawn-patrol-card-370x200.jpg");
+	background-size:cover;
+	background-position:top;
+	height: 220px;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}
+#card-image5{
+	background-image: url("../img/kikker-card-370x200.jpg");
+	background-size:cover;
+	background-position:top;
+	height: 220px;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}
+#card-image6{
+	background-image:url("../img/Mascha-en-de-beer-card-370x200.jpg");
+	background-size:cover;
+	background-position:bottom;
+	height: 220px;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}
+#card-image7{
+	background-image:url("../img/buurmanenbuurman-card-370x200.jpg");
+	background-size:cover;
+	background-position:top;
+	height: 220px;
+	transition: transform 300ms ease-in-out;
+    background-position: center;
+}
+article > div{
+	position: relative;
+    background-color: #FFF;
+	-webkit-box-shadow: 0 5px 10px 1px hsla(0,0%,0%,0.30);
+    box-shadow: 0 5px 10px 1px hsla(0,0%,0%,0.15);
+   
+}	      
+#cards-advertentie{
+		margin: auto;
+		display: grid;
+        grid-template-areas:'advertentie''card1''card2';
+		grid-template-columns: 100%;
+        width: 370px;
+		grid-template-rows: 470px 470px 470px;	
+        grid-gap: 40px;
+		justify-content: space-evenly;
+    	padding: 20px 0px;
+}
+#card-agenda{
+		margin: auto;
+		display: grid;
+        grid-template-areas:  'card4' 'card5' 'card6' 'card7';
+		grid-template-columns: 360px;
+		grid-template-rows: 470px 470px 470px 470px;	
+        grid-gap: 40px;
+		justify-content: space-evenly;
+    	padding: 20px 40px;
+}
+.agenda{
+        display: none;
+}
+.banner1040{
+		display: none;
+}
+	.banner370{
+		display: block;
+}
+/*VOORSTELLINGEN - INFO CARDS*/
+.bestel-button{
+    background-color: #C01727;
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    font-family: "le-havre";
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 3rem;
+    padding: 5px;
+    margin: auto;
+	transition: all 700ms;
+}
+.bestel-button:hover{
+	background-color: #000;
+}
+
+.card-info{
+    width: 60%;
+    height: 50px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 3rem;
+    -webkit-box-shadow: 0 5px 10px 1px hsla(0,0%,0%,0.30);
+    box-shadow: 0 5px 10px 1px hsla(0,0%,0%,0.30);
+    margin-top: -25px;
+    margin-right: 20%;
+    margin-left: 20%;
+    z-index: 10;
+    position: absolute;
+}
+.card-bodytekst{
+	font-size: 1.3rem;
+	text-align: center;
+	color: #000;
+	margin: 0px auto 30px;
+}
+.cards-kop{
+	font-size: 2.3rem;
+	margin-top: 50px;
+}
+section{
+    height: 470px;
+	background-color: #fff;;
+    margin: 20px;
+	position: relative;
+}
+
+
+/*///////////////////////////
+//////////  FOOTER /////////
+/////////////////////////*/
+
+footer {
+    font-family: "Raleway", "Helvetica Neue", "sans-serif";
+    font-style: normal;
+	background-color: #fff;
+}
+.flex-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-footer > div {
+  margin: 0 auto;
+  padding: 15px;
+  text-align: left;
+}
+.footer-social-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer i{
+    margin: 25px;
+	font-size: 2.5rem;
+}	
+footer img {
+    width: 250px;
+    height: auto;
+	margin-left: 25px;
+}
+/*///////////////////////////
+//////////  TABLET /////////
+/////////////////////////*/
+
+@media screen and (min-width:768px){
+
+/*///////VOORSTELLINGEN - GRID LAYOUT///////*/
+	#search-field{
+		width: 80%;
+	}
+	.zoek-term {
+        width: 75%;
+   	}
+	#cards-advertentie{
+        width: 83.5%;
+		grid-template-areas: 'advertentie advertentie''card1 card2';
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 470px 470px ;
+    }
+	#card-agenda{
+		width: 90.6%;
+		grid-template-areas: 'card4 card5' 'card6 card7';
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 470px 470px ;
+	}
+	.banner1040{
+		display: block;
+	}
+	.banner370{
+		display: none;
+	}
+	#slide-show{
+		width: 100%;
+        background-color: #000;
+        margin: 0 auto;
+		display: block;
+	}
+	.advertentie{
+		background-image: url("../img/Promo-kinderboekenweek-theater-825x650.jpg");
+	}
+	.flex-footer {
+       flex-direction: row;
+	}
+
+}
+/*///////////////////////////
+//////////  DESKTOP ////////
+/////////////////////////*/
+
+@media screen and (min-width: 1200px){
+	#menu{
+		width: 20%;
+		text-align: right;
+}
+	.navigation{
+        display: block;
+        float: left;
+        margin: 60px 0 0 420px;
+        font-family: "Raleway", "Helvetica Neue", "sans-serif";
+        font-size: 1.1rem;
+        font-weight: 400;
+		z-index: 50;
+    }
+
+	.navigation a {
+    display: block;
+	}
+	.navigation a:hover {
+    text-decoration: none;
+	color: #000;
+	}
+   
+	.dropdown {
+		float: left;
+	}
+
+	.dropdown .dropbtn {
+		border: none;
+		outline: none;
+		color: #000;
+		padding: 20px 40px;
+		background-color: inherit;
+	}
+
+	.navbar a:hover, .dropdown:hover .dropbtn {
+	   border-top: 2px solid #C01727;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #00A9CD;
+		min-width: 150px;
+		box-shadow: 0px 8px 16px 0px hsla(0,0%,0%,0.20);
+		z-index: 10;
+		text-decoration: none;
+	}
+
+	.dropdown-content a {
+	  color: #000;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #80E8FF;
+
+	}
+
+	.dropbtn.active {
+		border-top: 2px solid #C01727;
+		
+	}
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+/*///////VOORSTELLINGEN - GRID LAYOUT///////*/
+	#cards-advertentie{
+        width: 86.5%;
+        grid-template-areas: 'card1  card2 advertentie';
+		grid-template-columns: 30% 30% 30%;
+		grid-template-rows: 470px;
+     }
+	.advertentie{
+		background-image: url("../img/Promo kinderboekenweek-theater 370x470.jpg");
+	}
+	.agenda{
+			display: block;
+		}	
+	#card-agenda{
+        width: 92.5%;
+        grid-template-areas: 'card4 card5 agenda' 'card6 card7 agenda' ;
+		grid-template-columns: 30% 30% 30%;
+		}
+}
+
+
+@media print{
+    body {
+        margin: 0;
+        color: #000;
+        background-color: #fff;
+    }
+	.line{
+		color: #000;
+    }
+	nav img{
+		top: -7px;
+		left: 6cm;
+	}
+	#voorstelling{
+		position: absolute;
+		width: 21cm;
+		height: 29.7cm;
+		display: block;
+	}
+	article > div{
+	position: absolute;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0px 0px 0px #fff;
+    box-shadow: 0 0px 0px 0px #fff;
+    }
+	.line{
+		display:none;
+	}
+    .tickets{
+        padding: 0px;    
+		margin: 0px;
+		position: absolute;
+		left: 7cm;
+		top: -2cm;
+    }
+	 .tickets>li{
+       text-align: center;
+    }
+	.address{
+		padding: 0px;
+		margin: 0px;
+		position: absolute;
+		left: 17cm;
+		top: -1cm;
+	}
+	#top-navigatie, #slide-show, #slide-show-comments,iframe, .bezoek, .footer-social-logo, .voorstelling-bestel-button,   .voorstelling-bestel-button:hover{
+		display: none;
+	}
+}

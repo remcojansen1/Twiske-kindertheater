@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+    .info-voorstelling {grid-area: info-voorstelling;}
+    .tickets {grid-area: tickets;}
+	.movie-dolfje {grid-area: movie-dolfje;}
+
+ #voorstelling{
+        grid-template-areas: 'info-voorstelling''tickets''movie-dolfje';
+        grid-template-columns:100%;
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 0px
+    }
+    .info-voorstelling, .tickets{
+        padding: 25px;
+    }
+	  .movie-dolfje{
+		width: 370px;
+		height: 470px;
+		padding: 25px 0;
+        margin: 0 auto;
+   }
+	.tickets li{
+		margin: 15px;
+	}
+    .info-voorstelling>p{
+        margin: 15px 0;
+    }
+     .voorstelling-bestel-button{
+        background-color: #C01727;
+        width: 85%;
+        height: 45px;
+        border-radius: 5px;
+        font-family: "le-havre";
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 3rem;
+        padding: 5px;
+        margin: 15px auto 25px;
+        transition: all 700ms;
+    }
+     .voorstelling-bestel-button:hover{
+        background-color: #000;
+    }
+	.voorstelling-datum{
+        text-align: center;
+        font-style: italic;
+        font-size: 1.3rem;
+	}
+	.voorstelling-kop{
+        font-size: 2.3rem;
+        text-align: center;
+        margin:25px 0;
+	}
+/*///////////////////////////
+//////////  TABLET /////////
+/////////////////////////*/
+@media screen and (min-width:768px){
+
+/*/*VOORSTELLINGEN - GRID LAYOUT*/
+ 
+     #voorstelling{
+        grid-template-areas: 'info-voorstelling tickets' 'movie-dolfje movie-dolfje';
+        grid-template-columns: 40% 25%;
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: -150px
+    }
+    .info-voorstelling, .tickets, .movie-dolfje{
+        padding: 25px;
+        margin: 0 15px;
+    }
+	  .movie-dolfje{
+		width: 95%;
+		height: 470px;
+		padding-top: 25px;
+        margin: 0 auto;
+   }
+}
